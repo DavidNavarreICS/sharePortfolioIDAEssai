@@ -28,6 +28,7 @@ class ActionTest {
     void testGetLibelle() {
         final Action action = new ActionImpl();
         Assertions.assertNotNull(action.getLibelle());
+        Assertions.assertNotEquals(0, action.hashCode());
     }
 
     public class ActionImpl extends Action {
