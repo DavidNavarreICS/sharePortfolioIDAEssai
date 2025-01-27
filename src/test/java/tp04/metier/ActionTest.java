@@ -18,23 +18,32 @@ package tp04.metier;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import fr.utc.miage.shares.Action;
+import fr.utc.miage.shares.Jour;
+
+
 /**
  *
  * @author David Navarre &lt;David.Navarre at irit.fr&gt;
  */
 class ActionTest {
-
+private static final String DEFAULT_LABEL = "ABC";
     @Test
     void testGetLibelle() {
-        final Action action = new ActionImpl();
-        Assertions.assertNotNull(action.getLibelle());
-        Assertions.assertNotEquals(0, action.hashCode());
-    }
+        //ARRANGE
+        final Action action = new ActionImpl(DEFAULT_LABEL);
+
+        //ACTIONS
+        final String currentLabel = action.getLibelle();
+
+        //ASSERTIONS
+        Assertions.assertEquals(DEFAULT_LABEL, currentLabel, "Label should be the one used for the creation of the object");
+      }
 
     public class ActionImpl extends Action {
 
-        public ActionImpl() {
-            super("");
+        public ActionImpl(final String label) {
+            super(label);
         }
 
         public float valeur(Jour j) {
