@@ -23,8 +23,10 @@ import java.util.Objects;
  * @author perussel
  */
 public abstract class Action {
-    
-    private String libelle;
+    /**
+     * Label attribute.
+     */
+    private final String libelle;
 
     /**
      * Get the value of libelle
@@ -35,12 +37,23 @@ public abstract class Action {
         return libelle;
     }
 
-    public Action(String libelle) {
+    /**
+     * Builds an action based on a label.
+     * 
+     * @param libelle the label of the share
+     */
+    protected Action(final String libelle) {
         this.libelle = libelle;
     }
 
-    public abstract float valeur(Jour j);
-    
+    /**
+     * Provides the value ofthe share for a given day.
+     * 
+     * @param aDay the day
+     * @return the value of this share for this day
+     */
+    public abstract float valeur(Jour aDay);
+
     @Override
     public int hashCode() {
         int hash = 3;
@@ -49,7 +62,7 @@ public abstract class Action {
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(final Object obj) {
         if (obj == null) {
             return false;
         }
@@ -57,12 +70,10 @@ public abstract class Action {
             return false;
         }
         final Action other = (Action) obj;
-        if (!Objects.equals(this.libelle, other.libelle)) {
-            return false;
-        }
-        return true;
+        return (Objects.equals(this.libelle, other.libelle));
     }
 
+    @Override
     public String toString() {
         return this.getLibelle();
     }

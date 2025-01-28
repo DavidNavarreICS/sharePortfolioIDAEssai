@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tp04.metier;
+package fr.utc.miage.shares;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,24 +21,25 @@ import org.junit.jupiter.api.Test;
 import fr.utc.miage.shares.Action;
 import fr.utc.miage.shares.Jour;
 
-
 /**
  *
  * @author David Navarre &lt;David.Navarre at irit.fr&gt;
  */
 class ActionTest {
-private static final String DEFAULT_LABEL = "ABC";
+    private static final String DEFAULT_LABEL = "ABC";
+
     @Test
     void testGetLibelle() {
-        //ARRANGE
+        // ARRANGE
         final Action action = new ActionImpl(DEFAULT_LABEL);
 
-        //ACTIONS
+        // ACTIONS
         final String currentLabel = action.getLibelle();
 
-        //ASSERTIONS
-        Assertions.assertEquals(DEFAULT_LABEL, currentLabel, "Label should be the one used for the creation of the object");
-      }
+        // ASSERTIONS
+        Assertions.assertEquals(DEFAULT_LABEL, currentLabel,
+                "Label should be the one used for the creation of the object");
+    }
 
     public class ActionImpl extends Action {
 
