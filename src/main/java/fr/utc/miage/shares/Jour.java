@@ -33,10 +33,16 @@ public class Jour {
     /**
      * Builds a Jour object from a year and a day.
      * 
-     * @param aYear the year of the jour
-     * @param aDay  theday of the jour
+     * @param aYear the year of the jour &gt; 0
+     * @param aDay  theday of the jour &gt; 0
      */
     public Jour(final int aYear, final int aDay) {
+        if (0 >= aDay) {
+            throw new IllegalArgumentException("Day must be strictly more than 0");
+        }
+        if (0 >= aYear) {
+            throw new IllegalArgumentException("Year must be strictly more than 0");
+        }
         this.year = aYear;
         this.day = aDay;
     }
@@ -80,7 +86,7 @@ public class Jour {
             return false;
         }
         Jour other = (Jour) obj;
-        return (year != other.year) && (day == other.day);
+        return (year == other.year) && (day == other.day);
     }
 
     @Override

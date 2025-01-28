@@ -74,6 +74,13 @@ class JourTest {
     }
 
     @Test
+    void testEqualsWithEqualObjectShouldWork() {
+        final Jour jour1 = getDefaultJour();
+
+        assertEquals(jour1, jour1, "An Object Jour shouldbe equals to itself");
+    }
+
+    @Test
     void testNotEqualsWithDifferentDaysShouldWork() {
         final Jour jour1 = getDefaultJour();
         final Jour jour2 = new Jour(DEFAULT_YEAR, DEFAULT_DAY + 1);
@@ -82,18 +89,32 @@ class JourTest {
     }
 
     @Test
-    void testNotEqualsWithDifferentYearssShouldWork() {
+    void testNotEqualsWithDifferentYearsShouldWork() {
         final Jour jour1 = getDefaultJour();
         final Jour jour2 = new Jour(DEFAULT_YEAR + 1, DEFAULT_DAY);
 
         assertNotEquals(jour1, jour2, "Objects Jour with different years should not be equals");
     }
 
-    void testNotEqualsWithDifferentYearsAndDayssShouldWork() {
+    void testNotEqualsWithDifferentYearsAndDaysShouldWork() {
         final Jour jour1 = getDefaultJour();
         final Jour jour2 = new Jour(DEFAULT_YEAR + 1, DEFAULT_DAY + 1);
 
         assertNotEquals(jour1, jour2, "Objects Jour with different years and days should not be equals");
+    }
+
+    void testNotEqualsWithNullObjectShouldWork() {
+        final Jour jour1 = getDefaultJour();
+        final Jour jour2 = null;
+
+        assertNotEquals(jour1, jour2, "An Object Jour cannot be equals to null");
+    }
+
+    void testNotEqualsWithDifferentClassShouldWork() {
+        final Jour jour1 = getDefaultJour();
+        final Integer jour2 = 0;
+
+        assertNotEquals(jour1, jour2, "Objects Jour cannot be equals to objects from another class");
     }
 
     @Test
