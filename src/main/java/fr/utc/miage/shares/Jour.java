@@ -31,7 +31,7 @@ public class Jour {
     private final int day;
 
     /**
-     * Builds a Jour object from a year and a day.
+     * Builds a Jour object from one year and one day.
      * 
      * @param aYear the year of the jour &gt; 0
      * @param aDay  theday of the jour &gt; 0
