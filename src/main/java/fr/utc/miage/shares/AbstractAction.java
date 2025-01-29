@@ -19,14 +19,24 @@ package fr.utc.miage.shares;
 import java.util.Objects;
 
 /**
- *
- * @author perussel
+ * This class represents the common behaviour of any share.
+ * 
+ * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
-public abstract class Action {
+public abstract class AbstractAction {
     /**
      * Label attribute.
      */
     private final String libelle;
+
+    /**
+     * Builds an action based on a label.
+     * 
+     * @param libelle the label of the share
+     */
+    protected AbstractAction(final String libelle) {
+        this.libelle = libelle;
+    }
 
     /**
      * Get the value of libelle.
@@ -35,15 +45,6 @@ public abstract class Action {
      */
     public String getLibelle() {
         return libelle;
-    }
-
-    /**
-     * Builds an action based on a label.
-     * 
-     * @param libelle the label of the share
-     */
-    protected Action(final String libelle) {
-        this.libelle = libelle;
     }
 
     /**
@@ -56,7 +57,7 @@ public abstract class Action {
 
     @Override
     public int hashCode() {
-        int hash = 3;
+        var hash = 3;
         hash = 53 * hash + Objects.hashCode(this.libelle);
         return hash;
     }
@@ -69,7 +70,7 @@ public abstract class Action {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Action other = (Action) obj;
+        final AbstractAction other = (AbstractAction) obj;
         return (Objects.equals(this.libelle, other.libelle));
     }
 
