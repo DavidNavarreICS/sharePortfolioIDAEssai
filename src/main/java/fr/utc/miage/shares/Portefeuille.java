@@ -19,71 +19,68 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author perussel
+ * This class represents a portfolio of shares.
+ * 
+ * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
 public class Portefeuille {
+    /**
+     * The collection of shares in this portfolio with their quantity.
+     */
+    private final Map<AbstractAction, Integer> mapLignes;
 
-    Map<AbstractAction, LignePortefeuille> mapLignes;
-
-    private class LignePortefeuille {
-
-        private AbstractAction action;
-
-        private int qte;
-
-        public int getQte() {
-            return qte;
-        }
-
-        public void setQte(int qte) {
-            this.qte = qte;
-        }
-
-        public AbstractAction getAction() {
-            return this.action;
-        }
-
-        public LignePortefeuille(AbstractAction action, int qte) {
-            this.action = action;
-            this.qte = qte;
-        }
-
-        public String toString() {
-            return Integer.toString(qte);
-        }
-    }
-
+    /**
+     * Builds a protfolio.
+     */
     public Portefeuille() {
-        this.mapLignes = new HashMap();
+        this.mapLignes = new HashMap<>();
     }
 
-    public void acheter(AbstractAction a, int q) {
+    /**
+     * Stores the bought share.
+     * 
+     * @param a the share
+     * @param q the quantity of this share
+     */
+    public void acheter(final AbstractAction a, final int q) {
         if (this.mapLignes.containsKey(a) == false) {
-            this.mapLignes.put(a, new LignePortefeuille(a, q));
+            this.mapLignes.put(a, q);
         } else {
-            this.mapLignes.get(a).setQte(this.mapLignes.get(a).getQte() + q);
+            this.mapLignes.put(a, this.mapLignes.get(a) + q);
         }
     }
 
-    public void vendre(AbstractAction a, int q) {
+    /**
+     * Sells a quantity of a share.
+     * 
+     * @param a the share
+     * @param q the quantity
+     */
+    public void vendre(final AbstractAction a, final int q) {
         if (this.mapLignes.containsKey(a) == true) {
-            if (this.mapLignes.get(a).getQte() > q) {
-                this.mapLignes.get(a).setQte(this.mapLignes.get(a).getQte() - q);
-            } else if (this.mapLignes.get(a).getQte() == q) {
+            if (this.mapLignes.get(a) > q) {
+                this.mapLignes.put(a, this.mapLignes.get(a) - q);
+            } else if (this.mapLignes.get(a) == q) {
                 this.mapLignes.remove(a);
             }
         }
     }
 
+    @Override
     public String toString() {
         return this.mapLignes.toString();
     }
 
-    public float valeur(Jour j) {
+    /**
+     * Provides the value of the protfolio.
+     * 
+     * @param j the day
+     * @return the value
+     */
+    public float valeur(final Jour j) {
         float total = 0;
-        for (LignePortefeuille lp : this.mapLignes.values()) {
-            total = total + (lp.getQte() * lp.getAction().valeur(j));
+        for (Map.Entry<AbstractAction, Integer> iterable_element : mapLignes.entrySet()) {
+            total = total + (iterable_element.getValue() * iterable_element.getKey().valeur(j));
         }
         return total;
     }

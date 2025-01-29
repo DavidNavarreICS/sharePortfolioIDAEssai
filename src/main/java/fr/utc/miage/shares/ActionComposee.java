@@ -25,7 +25,9 @@ import java.util.Map;
  * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
 public class ActionComposee extends AbstractAction {
-    // attribut lien
+    /**
+     * Collection of shares with their distribution.
+     */
     private final Map<ActionSimple, Float> mapPanier;
 
     /**
@@ -58,6 +60,11 @@ public class ActionComposee extends AbstractAction {
         }
 
         return valeur;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
     @Override

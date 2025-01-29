@@ -20,55 +20,98 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author perussel
+ * This class represents a share.
+ * 
+ * @author David Navarre &lt;David.Navarre@irit.fr&gt;
  */
 public class ActionSimple extends AbstractAction {
 
-    // attribut lien
-    private Map<Jour, Cours> mapCours;
+    /**
+     * Storage of the value of the share for each day.
+     */
+    private final Map<Jour, Cours> mapCours;
 
-    // constructeur
-    public ActionSimple(String libelle) {
-        // Action simple initialisée comme 1 action
+    /**
+     * Builds an ActionSimple from a label.
+     * 
+     * @param libelle the label of the share.
+     */
+    public ActionSimple(final String libelle) {
         super(libelle);
-        // init spécifique
-        this.mapCours = new HashMap();
+        this.mapCours = new HashMap<>();
     }
 
-    // enrg possible si pas de cours pour ce jour
-    public void enrgCours(Jour j, float v) {
-        if (this.mapCours.containsKey(j) == false)
+    /**
+     * Registers the value of the share for a given day.
+     * 
+     * @param j the day of the change
+     * @param v the value of the share for this day
+     */
+    public void enrgCours(final Jour j, final float v) {
+        if (!this.mapCours.containsKey(j)) {
             this.mapCours.put(j, new Cours(j, v));
+        }
     }
 
     @Override
-    public float valeur(Jour j) {
+    public float valeur(final Jour j) {
         if (this.mapCours.containsKey(j) == true)
             return this.mapCours.get(j).getValeur();
         else
             return 0; // definition d'une constante possible
     }
 
-    // encapsulation de la définition de la classe Cours
+    /**
+     * Utility that represents a couple day/value.
+     */
     private class Cours {
+        /**
+         * The day attribute.
+         */
+        private final Jour jour;
+        /**
+         * The value attribute.
+         */
+        private final float valeur;
 
-        private Jour jour;
-
-        private float valeur;
-
-        public float getValeur() {
-            return valeur;
-        }
-
-        public Jour getJour() {
-            return jour;
-        }
-
-        public Cours(Jour jour, float valeur) {
+        /**
+         * Builds a Cours object.
+         * 
+         * @param jour   the day
+         * @param valeur the value
+         */
+        public Cours(final Jour jour, final float valeur) {
             this.jour = jour;
             this.valeur = valeur;
         }
 
+        /**
+         * Read access to the value.
+         * 
+         * @return the value
+         */
+        public float getValeur() {
+            return valeur;
+        }
+
+        /**
+         * Read access to the day.
+         * 
+         * @return the day
+         */
+        public Jour getJour() {
+            return jour;
+        }
+
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        return super.equals(obj);
     }
 }
