@@ -18,7 +18,7 @@ package fr.utc.miage.shares;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import fr.utc.miage.shares.Action;
+import fr.utc.miage.shares.AbstractAction;
 import fr.utc.miage.shares.Jour;
 
 /**
@@ -31,7 +31,7 @@ class ActionTest {
     @Test
     void testGetLibelle() {
         // ARRANGE
-        final Action action = new ActionImpl(DEFAULT_LABEL);
+        final AbstractAction action = new ActionImpl(DEFAULT_LABEL);
 
         // ACTIONS
         final String currentLabel = action.getLibelle();
@@ -41,7 +41,7 @@ class ActionTest {
                 "Label should be the one used for the creation of the object");
     }
 
-    public class ActionImpl extends Action {
+    public class ActionImpl extends AbstractAction {
 
         public ActionImpl(final String label) {
             super(label);
