@@ -29,7 +29,7 @@ public abstract class Action {
     private final String libelle;
 
     /**
-     * Get the value of libelle
+     * Get the value of libelle.
      *
      * @return the value of libelle
      */
