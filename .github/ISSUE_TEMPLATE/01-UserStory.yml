@@ -29,13 +29,10 @@ body:
       placeholder: Détail de l'objectif
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: ATTENTION: Pensez à ajouter les tests de cette user story en tant que sous-prolème.
   - type: checkboxes
     id: to-test
     attributes:
-      label: ATTENTION: Pensez à ajouter les tests de cette user story en tant que sous-prolème.
+      label: "ATTENTION: Pensez à ajouter les tests de cette user story en tant que sous-problème."
       options:
         - label: En cochant cette case, j'ai conscience qu'une user story sans test est inutile.
           required: true
