@@ -32,7 +32,7 @@ body:
   - type: checkboxes
     id: to-test
     attributes:
-      label: "ATTENTION: Pensez à ajouter les tests de cette user story en tant que sous-problème."
+      label: "ATTENTION: Pensez à ajouter les tests de cette user story en tant que sous-problèmes."
       options:
         - label: En cochant cette case, j'ai conscience qu'une user story sans test est inutile.
           required: true
