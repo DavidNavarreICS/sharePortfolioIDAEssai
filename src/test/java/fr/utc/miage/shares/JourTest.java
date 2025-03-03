@@ -130,7 +130,9 @@ class JourTest {
         assertEquals(expected, result,
                 "ToString should be format as \"Jour [year=\" + year + \", day=\" + day + \"]\"");
     }
-
+    /**
+    * Creates a Jour object with default year and day.
+    */
     private Jour getDefaultJour() {
         return new Jour(DEFAULT_YEAR, DEFAULT_DAY);
     }
