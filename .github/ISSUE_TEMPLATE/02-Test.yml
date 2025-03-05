@@ -18,7 +18,7 @@ body:
       required: false
   - type: dropdown
     attributes:
-      label: [facultatif] Modification de condition 1
+      label: "[facultatif] Modification de condition 1"
       options:
         - AND
         - BUT
@@ -32,7 +32,7 @@ body:
       required: false
   - type: dropdown
     attributes:
-      label: [facultatif] Modification de condition 2
+      label: "[facultatif] Modification de condition 2"
       options:
         - AND
         - BUT
