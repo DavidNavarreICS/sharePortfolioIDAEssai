@@ -17,6 +17,7 @@ body:
     validations:
       required: false
   - type: dropdown
+    id: given-cond-1_1
     attributes:
       label: "[facultatif] Modification de condition 1"
       options:
@@ -26,11 +27,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: given-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
     validations:
       required: false
   - type: dropdown
+    id: given-cond-2_1
     attributes:
       label: "[facultatif] Modification de condition 2"
       options:
@@ -40,11 +43,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: given-cond-2_2
     attributes:
       label: Contenu de l'extension de condition 2
     validations:
       required: false
   - type: dropdown
+    id: given-cond-3_1
     attributes:
       label: "[facultatif] Modification de condition 3"
       options:
@@ -54,6 +59,7 @@ body:
     validations:
       required: false
   - type: textarea
+    id: given-cond-3_2
     attributes:
       label: Contenu de l'extension de condition 3
     validations:
@@ -66,6 +72,7 @@ body:
     validations:
       required: false
   - type: dropdown
+    id: when-cond-1_1
     attributes:
       label: "[facultatif] Modification de condition 1"
       options:
@@ -75,11 +82,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: when-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
     validations:
       required: false
   - type: dropdown
+    id: when-cond-2_1
     attributes:
       label: "[facultatif] Modification de condition 2"
       options:
@@ -89,11 +98,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: when-cond-2_2
     attributes:
       label: Contenu de l'extension de condition 2
     validations:
       required: false
   - type: dropdown
+    id: when-cond-3_1
     attributes:
       label: "[facultatif] Modification de condition 3"
       options:
@@ -103,6 +114,7 @@ body:
     validations:
       required: false
   - type: textarea
+    id: when-cond-3_2
     attributes:
       label: Contenu de l'extension de condition 3
     validations:
@@ -115,6 +127,7 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: then-cond-1_1
     attributes:
       label: "[facultatif] Modification de condition 1"
       options:
@@ -124,11 +137,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: then-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
     validations:
       required: false
   - type: dropdown
+    id: then-cond-2_1
     attributes:
       label: "[facultatif] Modification de condition 2"
       options:
@@ -138,11 +153,13 @@ body:
     validations:
       required: false
   - type: textarea
+    id: then-cond-2_2
     attributes:
       label: Contenu de l'extension de condition 2
     validations:
       required: false
   - type: dropdown
+    id: then-cond-3_1
     attributes:
       label: "[facultatif] Modification de condition 3"
       options:
@@ -152,6 +169,7 @@ body:
     validations:
       required: false
   - type: textarea
+    id: then-cond-3_2
     attributes:
       label: Contenu de l'extension de condition 3
     validations:
