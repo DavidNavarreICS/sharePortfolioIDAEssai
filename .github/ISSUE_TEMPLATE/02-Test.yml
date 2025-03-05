@@ -1,0 +1,165 @@
+name: Scenario de test
+description: Formalisation d'un scénario de test en suivant le langage GHERKIN. Ce template s'utilise en sous-issue d'une user story.
+title: "[Test]: "
+labels: ["test"]
+body:
+  - type: markdown
+    attributes:
+      value: ATTENTION à bien respecter GHERKIN avec au maximum 3 extensions de condition (AND / BUT).|
+        "Un scénario de test doit être clair et concis : il vaut mieux décomposer des scénarios complexes en plusieurs scénarios".|
+        Le langage technique est à éviter.|
+        En fonction du cas, GIVEN et WHEN ne sont pas à toujours à utiliser ensemble (par exemple, lorsqu'il un scénario ne dépend pas du contexte).
+  - type: textarea
+    id: given
+    attributes:
+      label: Given
+      description: Description du contexte général.
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 1
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 1
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 2
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 2
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 3
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 3
+    validations:
+      required: false      
+  - type: textarea
+    id: when
+    attributes:
+      label: When
+      description: Description d'une action faite par un utilisateur ou d'un événement déclencheur.
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 1
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 1
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 2
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 2
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 3
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 3
+    validations:
+      required: false      
+  - type: textarea
+    id: then
+    attributes:
+      label: Then
+      description: Description du comportement attendu du système.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 1
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 1
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 2
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 2
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: [facultatif] Modification de condition 3
+      options:
+        - AND
+        - BUT
+      default: 0
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Contenu de l'extension de condition 3
+    validations:
+      required: false      
+  - type: textarea
+    attributes:
+      label: Exemples
+      description: [facultatif] Un ou plusieurs exemples illustrant ce scénario.
+    validations:
+      required: false
+      
