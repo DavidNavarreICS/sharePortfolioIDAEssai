@@ -12,7 +12,7 @@ body:
   - type: textarea
     id: given
     attributes:
-      label: Given
+      label: "# Given"
       description: Description du contexte général.
     validations:
       required: false
