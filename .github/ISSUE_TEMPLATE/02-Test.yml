@@ -5,10 +5,10 @@ labels: ["test"]
 body:
   - type: markdown
     attributes:
-      value: ATTENTION à bien respecter GHERKIN avec au maximum 3 extensions de condition (AND / BUT).|
-        "Un scénario de test doit être clair et concis : il vaut mieux décomposer des scénarios complexes en plusieurs scénarios".|
+      value: "ATTENTION à bien respecter GHERKIN avec au maximum 3 extensions de condition (AND / BUT).|
+        Un scénario de test doit être clair et concis : il vaut mieux décomposer des scénarios complexes en plusieurs scénarios.|
         Le langage technique est à éviter.|
-        En fonction du cas, GIVEN et WHEN ne sont pas à toujours à utiliser ensemble (par exemple, lorsqu'il un scénario ne dépend pas du contexte).
+        En fonction du cas, GIVEN et WHEN ne sont pas à toujours à utiliser ensemble (par exemple, lorsqu'il un scénario ne dépend pas du contexte)."
   - type: textarea
     id: given
     attributes:
