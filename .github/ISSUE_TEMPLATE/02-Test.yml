@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        "ATTENTION à bien respecter GHERKIN avec au maximum 3 extensions de condition (AND / BUT).
+        "ATTENTION à bien respecter GHERKIN avec au maximum 2 extensions de condition (AND et/ou BUT).
         Un scénario de test doit être clair et concis : il vaut mieux décomposer des scénarios complexes en plusieurs scénarios.
         Le langage technique est à éviter.
         En fonction du cas, GIVEN et WHEN ne sont pas à toujours à utiliser ensemble (par exemple, lorsqu'il un scénario ne dépend pas du contexte)."
@@ -20,52 +20,16 @@ body:
       description: Description du contexte général.
     validations:
       required: false
-  - type: dropdown
-    id: given-cond-1_1
-    attributes:
-      label: "[facultatif] Modification de condition 1"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
   - type: textarea
     id: given-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
     validations:
       required: false
-  - type: dropdown
-    id: given-cond-2_1
-    attributes:
-      label: "[facultatif] Modification de condition 2"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
   - type: textarea
     id: given-cond-2_2
     attributes:
       label: Contenu de l'extension de condition 2
-    validations:
-      required: false
-  - type: dropdown
-    id: given-cond-3_1
-    attributes:
-      label: "[facultatif] Modification de condition 3"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
-  - type: textarea
-    id: given-cond-3_2
-    attributes:
-      label: Contenu de l'extension de condition 3
     validations:
       required: false
   - type: markdown
@@ -78,30 +42,10 @@ body:
       description: Description d'une action faite par un utilisateur ou d'un événement déclencheur.
     validations:
       required: false
-  - type: dropdown
-    id: when-cond-1_1
-    attributes:
-      label: "[facultatif] Modification de condition 1"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
   - type: textarea
     id: when-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
-    validations:
-      required: false
-  - type: dropdown
-    id: when-cond-2_1
-    attributes:
-      label: "[facultatif] Modification de condition 2"
-      options:
-        - AND
-        - BUT
-      default: 0
     validations:
       required: false
   - type: textarea
@@ -110,22 +54,6 @@ body:
       label: Contenu de l'extension de condition 2
     validations:
       required: false
-  - type: dropdown
-    id: when-cond-3_1
-    attributes:
-      label: "[facultatif] Modification de condition 3"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
-  - type: textarea
-    id: when-cond-3_2
-    attributes:
-      label: Contenu de l'extension de condition 3
-    validations:
-      required: false   
   - type: markdown
     attributes:
       value: "## Then"
@@ -136,52 +64,16 @@ body:
       description: Description du comportement attendu du système.
     validations:
       required: true
-  - type: dropdown
-    id: then-cond-1_1
-    attributes:
-      label: "[facultatif] Modification de condition 1"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
   - type: textarea
     id: then-cond-1_2
     attributes:
       label: Contenu de l'extension de condition 1
     validations:
       required: false
-  - type: dropdown
-    id: then-cond-2_1
-    attributes:
-      label: "[facultatif] Modification de condition 2"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
   - type: textarea
     id: then-cond-2_2
     attributes:
       label: Contenu de l'extension de condition 2
-    validations:
-      required: false
-  - type: dropdown
-    id: then-cond-3_1
-    attributes:
-      label: "[facultatif] Modification de condition 3"
-      options:
-        - AND
-        - BUT
-      default: 0
-    validations:
-      required: false
-  - type: textarea
-    id: then-cond-3_2
-    attributes:
-      label: Contenu de l'extension de condition 3
     validations:
       required: false
   - type: markdown
