@@ -18,18 +18,21 @@ body:
     attributes:
       label: "Given"
       description: Description du contexte général.
+      placeholder: "Etant donné que ..."
     validations:
       required: false
   - type: textarea
     id: given-cond-1_2
     attributes:
-      label: Contenu de l'extension de condition 1
+      label: Extension de condition 1
+      placeholder: "Et que / Mais que ..."
     validations:
       required: false
   - type: textarea
     id: given-cond-2_2
     attributes:
-      label: Contenu de l'extension de condition 2
+      label: Extension de condition 2
+      placeholder: "Et que / Mais que ..."
     validations:
       required: false
   - type: markdown
@@ -40,18 +43,21 @@ body:
     attributes:
       label: When
       description: Description d'une action faite par un utilisateur ou d'un événement déclencheur.
+      placeholder: "Lorsque ..."
     validations:
       required: false
   - type: textarea
     id: when-cond-1_2
     attributes:
-      label: Contenu de l'extension de condition 1
+      label: Extension de condition 1
+      placeholder: "Et que / Mais que ..."
     validations:
       required: false
   - type: textarea
     id: when-cond-2_2
     attributes:
-      label: Contenu de l'extension de condition 2
+      label: Extension de condition 2
+      placeholder: "Et que / Mais que ..."
     validations:
       required: false
   - type: markdown
@@ -62,18 +68,21 @@ body:
     attributes:
       label: Then
       description: Description du comportement attendu du système.
+      placeholder: "Alors ..."
     validations:
       required: true
   - type: textarea
     id: then-cond-1_2
     attributes:
-      label: Contenu de l'extension de condition 1
+      label: Extension de condition 1
+      placeholder: "Et / Mais ..."
     validations:
       required: false
   - type: textarea
     id: then-cond-2_2
     attributes:
-      label: Contenu de l'extension de condition 2
+      label: Extension de condition 2
+      placeholder: "Et / Mais ..."
     validations:
       required: false
   - type: markdown
@@ -82,7 +91,7 @@ body:
   - type: textarea
     attributes:
       label: Exemples
-      description: "[facultatif] Un ou plusieurs exemples illustrant ce scénario."
+      description: "[Facultatif] Un ou plusieurs exemples illustrant ce scénario."
     validations:
       required: false
       
